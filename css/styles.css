@@ -271,3 +271,86 @@ footer h2 {
 
     }
 }
+
+.contact_h1 {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.Container31 {
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(4, 25%);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.Container31 UL {
+    font-size: 14px;
+    list-style-type: none;
+}
+
+.Item31_UL1 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+.Item31_UL2 {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+.Container31 img {
+    grid-column: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.Container32 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.Container32_Button {
+    color: white;
+    background-color: #1B203D;
+    padding: 6px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.Container32_Name, .Container32_E-Mail, .Container32_Message {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.Container32_input {
+    color: #1B203D;
+    background-color: white;
+    border-style: solid;
+    border-color: #1B203D;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 4px; 
+    max-width: 200px;
+}
+
+.Container32 textarea {
+    resize: none;
+    color: #1B203D;
+    background-color: white;
+    border-style: solid;
+    border-color: #1B203D;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 4px;
+    height: 200px;
+    max-width: 500px;
+    width: 500px
+}
