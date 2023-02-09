@@ -183,3 +183,44 @@ footer h2 {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.Container11 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+}
+
+.Container11 img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.Container11 UL {
+    list-style-type: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.Container12 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.Container12 img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.Container12 UL {
+    list-style-type: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.Games_LI {
+    font-weight: 600;
+}
