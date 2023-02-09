@@ -184,6 +184,15 @@ footer h2 {
     padding-right: 1rem;
 }
 
+.Container10 {
+    background-color: #1B203D;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
 .Container11 {
     display: flex;
     justify-content: space-evenly;
@@ -223,4 +232,42 @@ footer h2 {
 
 .Games_LI {
     font-weight: 600;
+}
+
+.Container21 {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.Container21_Divider {
+    background-color: #1B203D;
+    width: 50px;
+}
+
+.Container21 H1, .Container21 H2 {
+    padding-top: 2rem;
+}
+
+.Container21 p {
+    text-align: left;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media screen and (max-width: 1500px){
+    .Container21 {
+        flex-direction: column;
+    }
+
+    .Container21_Divider {
+        height: 20px;
+        width: 100%;
+    }
+
+    .Container21 p {
+        text-align: center;
+
+    }
 }
