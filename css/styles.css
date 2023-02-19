@@ -21,6 +21,7 @@ input {
 
 header {
     background-color: #D9D9D9;
+    width: 100%;
 }
 
 footer {
@@ -159,7 +160,7 @@ footer h2 {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 0px;
+        top: 105px;
         gap: 0;
         flex-direction: column;
         background-color: #D9D9D9;
@@ -167,10 +168,11 @@ footer h2 {
         text-align: center;
         transition: 0.3s;
         font-size: 20px;
+        font-weight: 600;
     }
 
     .nav-item {
-        margin: 60px 0;
+        margin: 20px 0;
     }
 
     .nav-menu.Active {
