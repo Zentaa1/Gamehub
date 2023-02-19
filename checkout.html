@@ -5,15 +5,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <title>Gamehub</title>
-        <meta name="description" content="Gamehub Frontpage">
+        <title>Gamehub | Shopping cart</title>
+        <meta name="description" content="Your shopping cart.">
         <meta name="viewport" content="width=device-width, initial-scale-1">
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
       <header>
         <nav class="header">
-            <img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo">
+            <a href="index.html"><img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo"></a>
             <ul class="header_UL">
                 <li class="header_LI"><a href="index.html">Home</a></li>
                 <li class="header_LI"><a href="games.html">Games</a></li>
@@ -27,26 +27,20 @@
             </ul>
         </nav>
         <nav class="mobile">
-            <img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo">
+            <a href="index.html"><img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo"></a>
               <ul class="nav-menu">
                 <li class="nav-item">
-                  <a href="" class="nav-link">Home</a>
+                  <a href="index.html" class="nav-link">Home</a>
                 </li>
-              </ul>
-              <ul class="nav-menu">
                 <li class="nav-item">
-                  <a href="" class="nav-link">Games</a>
-                </li>
-              </ul>
-              <ul class="nav-menu">
-                <li class="nav-item">
-                  <a href="" class="nav-link">About us</a>
-                </li>
-              </ul>
-              <ul class="nav-menu">
-                <li class="nav-item">
-                  <a href="" class="nav-link">Contact us</a>
-                </li>
+                    <a href="games.html" class="nav-link">Games</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="about.html" class="nav-link">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact us</a>
+                  </li>
               </ul>
               <div class="hamburger">
                 <span class="bar"></span>
@@ -58,42 +52,42 @@
         <main>
             <h1 class="checkout-h1">Shopping cart</h1>
             <section class="container51">
-                <p class="item51-1">Products</p>
-                <p class="item51-2">Quantity</p>
-                <p class="item51-3">Price</p>
-                <p class="item51-4">Total Price</p>
-                <div class="item51-5">
+                <p class="item50 item51-1">Products</p>
+                <p class="item50 item51-2">Quantity</p>
+                <p class="item50 item51-3">Price</p>
+                <p class="item50 item51-4">Total Price</p>
+                <div class="item50 item51-5">
                   <img src="images/Cyberpunk.jpg" alt="Cyberpunk">
                   <ul>
                     <li class="li-bold">Cyberpunk for PLAYBOX</li>
                     <li>Open world Action game for the new PLAYBOX</li>
                   </ul>
                 </div>
-                <p class="item51-6">1</p>
-                <p class="item51-7">24.99</p>
-                <p class="item51-8">24.99</p>
+                <p class="item50 item51-6">1</p>
+                <p class="item50 item51-7">24.99</p>
+                <p class="item50 item51-8">24.99</p>
             </section>
             <section class="container52">
               <div class="shipping-payment">
                 <div class="shipping">
                   <h2>Shipping:</h2>
                   <div>
-                    <input type="checkbox" id="Express">
+                    <input type="radio" id="Express" name="shipping">
                     <label for="Express">DHL Express</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="Standard">
+                    <input type="radio" id="Standard" name="shipping">
                     <label for="Standard">DHL Standard</label>
                   </div>
                 </div>
                 <div class="payment">
                   <h2>Payment:</h2>
                   <div>
-                    <input type="checkbox" id="Visa">
+                    <input type="radio" id="Visa" name="payment">
                     <label for="Visa">Visa</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="Paypal">
+                    <input type="radio" id="Paypal" name="payment">
                     <label for="Paypal">Paypal</label>
                   </div>
                 </div>
@@ -180,5 +174,6 @@
             </ul>
             <h2>Copyright 2023 Gamehub © All Rights Reserved</h2>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
