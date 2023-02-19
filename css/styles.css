@@ -15,6 +15,10 @@ main {
     flex: 1;
 }
 
+input {
+    font-family: 'Khand', sans-serif;
+}
+
 header {
     background-color: #D9D9D9;
 }
@@ -212,6 +216,10 @@ footer h2 {
     justify-content: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.Container03 p {
+    max-width: 600px;
 }
 
 .Container04 {
@@ -516,6 +524,233 @@ footer h2 {
 @media screen and (max-width: 450px) {
     .container42 {
         flex-direction: column;
+        align-items: center;
+    }
+}
+
+.checkout-h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container51 {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+.item51-5 img {
+    height: 100%;
+    max-height: 80px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.li-bold {
+    font-weight: 900;
+}
+
+.item51-2 {
+    grid-column: 2;
+}
+
+.item51-3 {
+    grid-column: 3;
+}
+
+.item51-4 {
+    grid-column: 4;
+}
+
+.item51-5 {
+    display: flex;
+    margin-top: 40px;
+}
+ .container52 {
+    display: grid;
+    grid-template-columns: 0,5fr 100px;
+    grid-template-rows: 50px 150px 150px;
+    margin-bottom: 5rem;
+ }
+
+.shipping-payment {
+    grid-row: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shipping-info div {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.shipping-info {
+    grid-row-start: 3;
+    grid-row-end: -2;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(4, 50px);
+    place-self: center;
+}
+
+.shipping-0 {
+    margin: 0 10px;
+}
+
+.shipping-3, .shipping-4 {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.shipping-1, .shipping-2, .shipping-5, .shipping-6 {
+        width: 100%;
+        max-width: 190px;
+        margin: 0 auto;
+}
+
+.shipping-3 {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.shipping-4 {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.shipping-5 {
+    grid-row: 4;
+}
+
+.shipping-6 {
+    grid-row: 4;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    max-width: 125px;
+    width: auto;
+}
+
+.newsletter-1 {
+    background-color: #1B203D;
+    color: #D9D9D9;
+    width: 125px;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.newsletter input {
+    width: 135px;
+    padding: 3px;
+    background-color: #1B203D;
+    color: #D9D9D9;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.total {
+    text-align: center;
+    grid-column: 2;
+    grid-row: 4;
+    max-width: 100px;
+    width: auto;
+}
+
+.total-1 {
+    margin-top: 10px;
+}
+
+.total input {
+    width: 100px;
+    padding: 3px;
+    background-color: #1B203D;
+    color: #D9D9D9;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media screen and (max-width:700px) {
+    .container51 ul {
+        display: none;
+    }
+
+    .container52 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .newsletter {
+        align-self: center;
+        margin-top: 2rem;
+    }
+
+    .total {
+        align-self: center;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .shipping-info {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.container61 {
+    text-align: center;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.container61 img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    margin: 1rem;
+}
+
+.item61 {
+    background-color: #1B203D;
+    color: #D9D9D9;
+    width: 500px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.item61 p {
+    max-width: 300px;
+}
+
+.item61 h3 {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width:500px) {
+    .item61 {
+        flex-direction: column;
+        width: 200px;
         align-items: center;
     }
 }

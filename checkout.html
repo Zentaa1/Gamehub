@@ -11,49 +11,144 @@
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
-        <header>
-            <nav class="header">
-                <img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo">
-                <ul class="header_UL">
-                    <li class="header_LI"><a href="index.html">Home</a></li>
-                    <li class="header_LI"><a href="games.html">Games</a></li>
-                    <li class="header_LI"><a href="about.html">About us</a></li>
-                    <li class="header_LI"><a href="contact.html">Contact us</a></li>
-                    <li><input class="header_Input" type="text" placeholder="Search.."></li>
-                    <li><i class="material-icons">shopping_cart_checkout</i></li>
-                </ul>
-            </nav>
-            <nav class="mobile">
-              <img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo">
-                <ul class="nav-menu">
-                  <li class="nav-item">
-                    <a href="" class="nav-link">Home</a>
+      <header>
+        <nav class="header">
+            <img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo">
+            <ul class="header_UL">
+                <li class="header_LI"><a href="index.html">Home</a></li>
+                <li class="header_LI"><a href="games.html">Games</a></li>
+                <li class="header_LI"><a href="about.html">About us</a></li>
+                <li class="header_LI"><a href="contact.html">Contact us</a></li>
+                <li>
+                  <label class="la-search" for="search">Search</label>
+                  <input id="search" class="header_Input" type="text" placeholder="Search..">
                   </li>
-                </ul>
-                <ul class="nav-menu">
-                  <li class="nav-item">
-                    <a href="" class="nav-link">Games</a>
-                  </li>
-                </ul>
-                <ul class="nav-menu">
-                  <li class="nav-item">
-                    <a href="" class="nav-link">About us</a>
-                  </li>
-                </ul>
-                <ul class="nav-menu">
-                  <li class="nav-item">
-                    <a href="" class="nav-link">Contact us</a>
-                  </li>
-                </ul>
-                <div class="hamburger">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                </div>
-            </nav>
-        </header>
+                <li><i class="material-icons">shopping_cart_checkout</i></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo">
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="" class="nav-link">Home</a>
+                </li>
+              </ul>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="" class="nav-link">Games</a>
+                </li>
+              </ul>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="" class="nav-link">About us</a>
+                </li>
+              </ul>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="" class="nav-link">Contact us</a>
+                </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+          </nav>  
+    </header>
         <main>
-            
+            <h1 class="checkout-h1">Shopping cart</h1>
+            <section class="container51">
+                <p class="item51-1">Products</p>
+                <p class="item51-2">Quantity</p>
+                <p class="item51-3">Price</p>
+                <p class="item51-4">Total Price</p>
+                <div class="item51-5">
+                  <img src="images/Cyberpunk.jpg" alt="Cyberpunk">
+                  <ul>
+                    <li class="li-bold">Cyberpunk for PLAYBOX</li>
+                    <li>Open world Action game for the new PLAYBOX</li>
+                  </ul>
+                </div>
+                <p class="item51-6">1</p>
+                <p class="item51-7">24.99</p>
+                <p class="item51-8">24.99</p>
+            </section>
+            <section class="container52">
+              <div class="shipping-payment">
+                <div class="shipping">
+                  <h2>Shipping:</h2>
+                  <div>
+                    <input type="checkbox" id="Express">
+                    <label for="Express">DHL Express</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="Standard">
+                    <label for="Standard">DHL Standard</label>
+                  </div>
+                </div>
+                <div class="payment">
+                  <h2>Payment:</h2>
+                  <div>
+                    <input type="checkbox" id="Visa">
+                    <label for="Visa">Visa</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="Paypal">
+                    <label for="Paypal">Paypal</label>
+                  </div>
+                </div>
+              </div>
+                <div class="shipping-info">
+                  <div class="shipping-0 shipping-1">
+                    <label for="s-name">Name:</label>
+                    <input type="text" id="s-name">
+                  </div>
+                  <div class="shipping-0 shipping-2">
+                    <label for="s-phone">Phone:</label>
+                    <input type="text" id="s-phone">
+                  </div>
+                  <div class="shipping-0 shipping-3">
+                    <label for="s-mail">E-mail:</label>
+                    <input type="text" id="s-mail">
+                  </div>
+                  <div class="shipping-0 shipping-4">
+                    <label for="s-adress">House adress:</label>
+                    <input type="text" id="s-adress">
+                  </div>
+                  <div class="shipping-0 shipping-5">
+                    <label for="s-zip">Zip:</label>
+                    <input type="text" id="s-zip">
+                  </div>
+                  <div class="shipping-0 shipping-6">
+                    <label for="s-country">Country:</label>
+                    <input type="text" id="s-country">
+                  </div>
+                </div>
+                <div class="newsletter">
+                  <div class="newsletter-1">
+                    <p>Sign up to our newsletter
+                      and recieve great deals on e-mail.
+                    </p>
+                    <p>
+                      When you first sign up
+                      you will get a free 10$
+                      voucher right in your
+                      e-mail inbox!
+                    </p>
+                    <p>Happy gaming!</p>
+                  </div>
+                  <div>
+                    <input type="submit" value="Sign up!">
+                  </div>
+                </div>
+                <div class="total">
+                  <p>Products:  24.99 USD</p>
+                  <p>Shipping:  5 USD</p>
+                  <p class="total-1">Total:     29.99 USD</p>
+                  <a href="checkoutdone.html"><input type="submit" value="Pay now"></a>
+                </div>
+              </div>
+            </section>
         </main>
         <footer>
             <ul>
