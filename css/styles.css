@@ -377,8 +377,8 @@ footer h2 {
     flex-wrap: wrap;
 }
 
-.cyberpunk-header h2 {
-    max-width: 350px;
+.games-header h2 {
+    max-width: 600px;
 }
 
 .headers p {
@@ -386,14 +386,18 @@ footer h2 {
     font-size: 12px;
 }
 
-.cyberpunk-game {
+.games-gamesection {
+    padding-bottom: 3rem;
+}
+
+.games-game {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     font-size: 16px;
 }
 
-.cyberpunk-game img {
+.games-game img {
     width: 100%;
     max-width: 230px;
     height: auto;
@@ -406,6 +410,7 @@ footer h2 {
 
 .stock {
     font-size: 12px;
+    margin-bottom: 1rem;
 }
 
 .add-to-cart {
@@ -414,14 +419,13 @@ footer h2 {
     color: white;
     font-weight: 600;
     border-radius: 1rem;
-    margin-top: 3rem;
     font-family: 'Khand', sans-serif;
     width: 100px;
     font-size: 20px;
     text-decoration: none;
 }
 
-.cyberpunk-about {
+.games-about {
     display: flex;
     justify-content: center;
     display: grid;
@@ -430,7 +434,7 @@ footer h2 {
 
 }
 
-.cyberpunk-about h2 {
+.games-about h2 {
     font-size: 24px;
 }
 
@@ -448,11 +452,11 @@ footer h2 {
     max-width: 600px;
 }
 
-.cyberpunk-item {
+.games-item {
     margin: 0 20px;
 }
 
-.cyberpunk-review {
+.games-review {
     grid-row-start: -3;
     grid-row-end: -1;
     grid-column: 2;
@@ -755,17 +759,17 @@ footer h2 {
 }
 
 @media screen and (max-width: 1000px) {
-    .cyberpunk-about {
+    .games-about {
         display: flex;
         flex-direction: column;
     }
-    .cyberpunk-item {
+    .games-item {
         margin-top: 1rem;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .cyberpunk-game {
+    .games-game {
         flex-direction: column;
         align-items: center;
     }
