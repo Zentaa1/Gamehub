@@ -136,11 +136,6 @@ footer h2 {
 }
 
 .main-header {
-    background-color: #1B203D;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 10px;
 }
 
@@ -197,11 +192,6 @@ footer h2 {
 }
 
 .main-actiongames {
-    background-color: #1B203D;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding-top: 10px;
     padding-bottom: 1rem;
 }
@@ -220,9 +210,6 @@ footer h2 {
 }
 
 .games-header {
-    background-color: #1B203D;
-    color: white;
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
