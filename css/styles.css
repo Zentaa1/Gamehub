@@ -166,11 +166,23 @@ footer h2 {
     list-style-type: none;
 }
 
+.ping-pong-li {
+    padding-top: 1rem;
+}
+
 .main-catchphrase {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
     padding-top: 2rem;
+}
+
+.main-catchphrase h1 {
+    max-width: 200px;
+}
+
+.main-catchphrase h2 {
+    max-width: 400px;
 }
 
 .main-paragraph {
@@ -181,6 +193,7 @@ footer h2 {
 
 .main-paragraph p {
     max-width: 600px;
+    font-size: 18px;
 }
 
 .main-actiongames {
