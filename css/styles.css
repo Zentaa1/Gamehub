@@ -424,6 +424,7 @@ footer h2 {
 .games-about {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     display: grid;
     place-items: center;
     margin: 5rem 0;

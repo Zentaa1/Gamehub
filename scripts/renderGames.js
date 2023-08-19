@@ -5,7 +5,7 @@ getApi();
     const gameSection = document.querySelector('.games-gamesection');
     
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < data.length; i++) {
 
         const gameTitleData = data[i].title;
         const gameImgData = data[i].image;
@@ -20,19 +20,12 @@ getApi();
 
         const gameLink = document.createElement('a');
         gameLink.setAttribute('href', `gameInformation.html?id=${gameId}`);
+        gameLink.setAttribute('data-game-index', i);
         games.appendChild(gameLink);
-        
-        gameLink.addEventListener('click', function (event) {
-            const clickedGameLink = event.target.closest('a');
-            if (clickedGameLink) {
-                event.preventDefault();
-                const gameIndex = clickedGameLink.dataset.index;
-                const clickedGameData = data[gameIndex];
-                renderProductPage(clickedGameData);
-            }
+
+        gameLink.addEventListener('click', function(event) {
+            renderProductPage(data);
         });
-
-
 
         const gameImg = document.createElement('img');
         gameImg.src = gameImgData;
@@ -62,5 +55,3 @@ getApi();
 
     }
   }
-
-  
