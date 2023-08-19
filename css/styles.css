@@ -227,10 +227,13 @@ footer h2 {
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding-top: 5rem;
+    overflow-x: auto;
 }
 
 .games-gamesection div{
     padding: 3rem;
+    flex-shrink: 0;
+    height: 330px;
 }
 
 .games-gamesection div:hover{
@@ -257,6 +260,11 @@ footer h2 {
 
 .games-li {
     font-weight: 600;
+}
+
+.gameOldPrice {
+    text-decoration: line-through;
+    color: red;
 }
 
 .about {
