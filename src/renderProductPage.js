@@ -10,7 +10,7 @@ function renderProductPage(data, clickedGameData) {
         console.log(clickedGameData.image);
 
     } else {
-        console.error('.games-game element not found in the DOM');
+        console.error(error);
     }
 }
 
