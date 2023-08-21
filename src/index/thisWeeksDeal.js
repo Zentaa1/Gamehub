@@ -7,7 +7,7 @@ fetchApi(url)
         const mSecPerWeek = 7 * 24 * 60 * 60 * 1000;
         let i = 0;
 
-        thisWeeksDeal(game, i); // Initial call
+        thisWeeksDeal(game, i);
 
         setInterval(() => {
             i = (i + 1) % game.length;

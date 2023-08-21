@@ -1,4 +1,11 @@
 import fetchApi from '../fetchApi.js';
+import { showLoading, hideLoading } from "../loading.js";
+
+
+async function games() {
+
+    showLoading();
+
 
 const url = 'https://api.noroff.dev/api/v1/gamehub';
 const gameSection = document.querySelector('.games-gamesection');
@@ -9,6 +16,8 @@ const game = await fetchApi(url);
 console.log(game)
 
 for (let i = 0; i < game.length; i++) {
+
+    showLoading();
 
     const gameTitleData = game[i].title;
     const gameImgData = game[i].image;
@@ -52,4 +61,11 @@ for (let i = 0; i < game.length; i++) {
     }
 
 
+    hideLoading();
+
 }
+
+    
+}
+
+games();
