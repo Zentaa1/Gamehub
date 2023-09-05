@@ -13,8 +13,6 @@ const gameSection = document.querySelector('.games-gamesection');
 
 const game = await fetchApi(url);
 
-console.log(game)
-
 for (let i = 0; i < game.length; i++) {
 
     showLoading();

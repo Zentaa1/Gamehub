@@ -19,7 +19,6 @@ fetchApi(url)
     });
 
 export default function thisWeeksDeal(game, index) {
-    console.log(`Spillet denne uka: ${game[index].title}`);
 
     const isOnSale = game[index].onSale;
     const gameId = game[index].id;
