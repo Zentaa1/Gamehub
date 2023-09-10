@@ -3,9 +3,9 @@ import { userReview } from '../ProductPage/userReviews.js';
 import { showLoading, hideLoading } from "../loading.js";
 
 async function productPage() {
-
     showLoading();
 
+    try {
     const url = 'https://api.noroff.dev/api/v1/gamehub';
     const data = await fetchApi(url);
 
@@ -81,6 +81,11 @@ async function productPage() {
     });
 
     hideLoading();
+    } catch (error) {
+        console.log(error);
+    }
+
+    
 
 }
 
