@@ -9,4 +9,5 @@ try {
     const game = await fetchApi(url);
 } catch (error){
     console.log(error);
+    window.alert('Something went wrong, Please try again later.');
 }
