@@ -1,5 +1,12 @@
 import fetchApi from '../fetchApi.js';
+import { displayGames } from '../games/displayGames.js';
 import { showLoading, hideLoading } from "../loading.js";
+import { allGameFilter } from '../games/allGameFilter.js';
+import { actionGameFilter } from '../games/actionGameFilter.js';
+import { adventureGameFilter } from '../games/adventureGameFilter.js';
+import { sportsGameFilter } from '../games/sportsGameFilter.js';
+import { horrorGameFilter } from '../games/horrorGameFilter.js';
+import { searchGames } from '../games/searchFilter.js';
 
 
 async function games() {
@@ -8,56 +15,56 @@ async function games() {
     try {
         const url = 'https://api.noroff.dev/api/v1/gamehub';
         const gameSection = document.querySelector('.games-gamesection');
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
 
+        let game = await fetchApi(url);
 
-        const game = await fetchApi(url);
+        displayGames(game);
 
-        for (let i = 0; i < game.length; i++) {
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value.trim();
+            const filteredGames = searchGames(game, searchTerm);
+            displayGames(filteredGames);
 
-            showLoading();
-
-            const gameTitleData = game[i].title;
-            const gameImgData = game[i].image;
-            const gamePriceData = game[i].price;
-            const gameDiscountData = game[i].discountedPrice;
-            const isOnSale = game[i].onSale;
-            const gameId = game[i].id;
-
-            const games = document.createElement('div');
-            games.classList.add('games');
-            gameSection.appendChild(games);
-
-            const gameLink = document.createElement('a');
-            gameLink.setAttribute('href', `gameInformation.html?id=${gameId}`);
-            gameLink.setAttribute('data-game-index', i);
-            games.appendChild(gameLink);
-
-            const gameImg = document.createElement('img');
-            gameImg.src = gameImgData;
-            gameLink.appendChild(gameImg);
-
-            const gameInfo = document.createElement('ul');
-            games.appendChild(gameInfo);
-
-            const gameTitle = document.createElement('li');
-            gameTitle.textContent = gameTitleData;
-            gameInfo.appendChild(gameTitle);
-
-            const gamePrice = document.createElement('li');
-            gamePrice.classList.add('games-li');
-            gameInfo.appendChild(gamePrice);
-
-            if (isOnSale) {
-                const gameOldPrice = document.createElement('li');
-                gameOldPrice.classList.add('gameOldPrice');
-                gameOldPrice.textContent = gamePriceData + ' USD';
-                gameInfo.appendChild(gameOldPrice)
-                gamePrice.textContent = gameDiscountData + ' USD';
-            } else {
-                gamePrice.textContent = gamePriceData + ' USD';
+            console.log(filteredGames);
+        });
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const searchTerm = searchInput.value.trim();
+                const filteredGames = searchGames(game, searchTerm);
+                displayGames(filteredGames);
             }
-        }
-        hideLoading();
+        });
+
+
+        const allGameButton = document.querySelector('.allGameFilter');
+        allGameButton.addEventListener('click', () => {
+            allGameFilter();
+        })
+
+        const actionGameButton = document.querySelector('.actionGameFilter');
+        actionGameButton.addEventListener('click', () => {
+            actionGameFilter();
+        })
+
+        const adventureGameButton = document.querySelector('.adventureGameFilter');
+        adventureGameButton.addEventListener('click', () => {
+            adventureGameFilter();
+        })
+
+        const sportsGameButton = document.querySelector('.sportsGameFilter');
+        sportsGameButton.addEventListener('click', () => {
+            sportsGameFilter();
+        })
+
+        const horrorGameButton = document.querySelector('.horrorGameFilter');
+        horrorGameButton.addEventListener('click', () => {
+            horrorGameFilter();
+        })
+
+
+
     } catch (error) {
         console.log(error);
         window.alert('Something went wrong, Please try again later.');

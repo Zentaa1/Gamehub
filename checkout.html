@@ -12,139 +12,94 @@
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
-      <header>
-        <nav class="header">
-            <a href="index.html"><img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo"></a>
-            <ul class="header_UL">
-                <li class="header_LI"><a href="index.html">Home</a></li>
-                <li class="header_LI"><a href="games.html">Games</a></li>
-                <li class="header_LI"><a href="about.html">About us</a></li>
-                <li class="header_LI"><a href="contact.html">Contact us</a></li>
-                <li>
-                  <label class="la-search" for="search">Search</label>
-                  <input id="search" class="header_Input" type="text" placeholder="Search..">
-                  </li>
-                <li><i class="material-icons">shopping_cart_checkout</i></li>
-            </ul>
-        </nav>
-        <nav class="mobile">
-            <a href="index.html"><img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo"></a>
-              <ul class="nav-menu">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="games.html" class="nav-link">Games</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="about.html" class="nav-link">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact us</a>
-                  </li>
-              </ul>
-              <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
-          </nav>  
-    </header>
-        <main>
-            <h1 class="checkout-h1">Shopping cart</h1>
-            <div class="checkout-cart">
-                <p class="cart-item cart-item1">Products</p>
-                <p class="cart-item cart-item2">Quantity</p>
-                <p class="cart-item cart-item3">Price</p>
-                <p class="cart-item cart-item4">Total Price</p>
-                <div class="cart-item cart-item5">
-                  <img src="images/Cyberpunk.jpg" alt="Cyberpunk">
-                  <ul>
-                    <li class="li-bold">Cyberpunk for PLAYBOX</li>
-                    <li>Open world Action game for the new PLAYBOX</li>
+        <header>
+            <nav class="header">
+                <a href="index.html"><img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo"></a>
+                <ul class="header_UL">
+                    <li class="header_LI"><a href="index.html">Home</a></li>
+                    <li class="header_LI"><a href="games.html">Games</a></li>
+                    <li class="header_LI"><a href="about.html">About us</a></li>
+                    <li class="header_LI"><a href="contact.html">Contact us</a></li>
+                    <i class="material-icons">shopping_cart_checkout</i>
+                </ul>
+            </nav>
+            <nav class="mobile">
+                <a href="index.html"><img class="header_Logo" src="images/GameHub_Logo.png" alt="Gamehub Logo"></a>
+                  <ul class="nav-menu">
+                    <li class="nav-item">
+                      <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="games.html" class="nav-link">Games</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="about.html" class="nav-link">About us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="cart.html" class="nav-link">Cart</a>
+                      </li>
                   </ul>
-                </div>
-                <p class="cart-item cart-item6">1</p>
-                <p class="cart-item cart-item7">24.99</p>
-                <p class="cart-item cart-item8">24.99</p>
-              </div>
-            <section class="checkout">
-              <div class="shipping-payment">
+                  <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div>
+              </nav>  
+        </header>
+        <main>
+            <div class="checkoutTop">
                 <div class="shipping">
-                  <h2>Shipping:</h2>
-                  <div>
-                    <input type="radio" id="Express" name="shipping">
-                    <label for="Express">DHL Express</label>
-                  </div>
-                  <div>
-                    <input type="radio" id="Standard" name="shipping">
-                    <label for="Standard">DHL Standard</label>
-                  </div>
+                    <h2>Shipping:</h2>
+                    <div>
+                        <label for="dhl">DHL Standard</label>
+                        <input type="radio" name="shipping" id="dhl" class="dhl">
+                    </div>
+                    <div class="expressDiv">
+                        <label for="dhlExpress">DHL Express</label>
+                        <input type="radio" name="shipping" id="dhlExpress" class="dhlExpress">
+                        <p> + 10 USD</p>
+                    </div>
                 </div>
                 <div class="payment">
-                  <h2>Payment:</h2>
-                  <div>
-                    <input type="radio" id="Visa" name="payment">
-                    <label for="Visa">Visa</label>
-                  </div>
-                  <div>
-                    <input type="radio" id="Paypal" name="payment">
-                    <label for="Paypal">Paypal</label>
-                  </div>
+                    <h2>Payment:</h2>
+                    <div>
+                        <label for="paypalRadio">Paypal</label>
+                        <input type="radio" name="payment" id="paypalRadio" class="paypalRadio">
+                    </div>
+                    <div class="paypal">
+                        <input type="text" placeholder="Paypal Email..." required>
+                    </div>
+                    <div>
+                        <label for="visaRadio">Visa</label>
+                        <input type="radio" name="payment" id="visaRadio" class="visaRadio">
+                    </div>
+                    <div class="visa">
+                        <input type="number" placeholder="Card Number" required>
+                        <input type="number" placeholder="CVC" required>
+                        <input type="date" required>
+                    </div>
                 </div>
-              </div>
-                <div class="shipping-info">
-                  <div class="shipping shipping-name">
-                    <label for="s-name">Name:</label>
-                    <input type="text" id="s-name">
-                  </div>
-                  <div class="shipping shipping-phone">
-                    <label for="s-phone">Phone:</label>
-                    <input type="text" id="s-phone">
-                  </div>
-                  <div class="shipping shipping-mail">
-                    <label for="s-mail">E-mail:</label>
-                    <input type="text" id="s-mail">
-                  </div>
-                  <div class="shipping shipping-adress">
-                    <label for="s-adress">House adress:</label>
-                    <input type="text" id="s-adress">
-                  </div>
-                  <div class="shipping shipping-zip">
-                    <label for="s-zip">Zip:</label>
-                    <input type="text" id="s-zip">
-                  </div>
-                  <div class="shipping shipping-country">
-                    <label for="s-country">Country:</label>
-                    <input type="text" id="s-country">
-                  </div>
+            </div>
+            <div class="checkoutSide">
+                <div>
+                    <div>
+                        <h4>Product Price</h4>
+                        <h4>124.77</h4>
+                    </div>
+                    <div>
+                        <h4>Shipping:</h4>
+                        <h4 class="shippingPrice"></h4>
+                    </div>
                 </div>
-                <div class="newsletter">
-                  <div class="newsletter-text">
-                    <p>Sign up to our newsletter
-                      and recieve great deals on e-mail.
-                    </p>
-                    <p>
-                      When you first sign up
-                      you will get a free 10$
-                      voucher right in your
-                      e-mail inbox!
-                    </p>
-                    <p>Happy gaming!</p>
-                  </div>
-                  <div>
-                    <input type="submit" value="Sign up!">
-                  </div>
+                <div class="checkoutPriceDiv">
+                    <h4>Total Price:</h4>
+                    <h2 class="checkoutPrice">124.77</h2>
                 </div>
-                <div class="total">
-                  <p>Products:  24.99 USD</p>
-                  <p>Shipping:  5 USD</p>
-                  <p class="total-price">Total:     29.99 USD</p>
-                  <div>
-                    <a href="checkoutdone.html">Pay now</a>
-                  </div>
-                </div>
-            </section>
+                <a href="checkoutdone.html">Buy now</a>
+            </div>
         </main>
         <footer>
             <ul>
@@ -176,6 +131,7 @@
             </ul>
             <h2>Copyright 2023 Gamehub © All Rights Reserved</h2>
         </footer>
-        <script src="hamburger.js"></script>
+        <script src="src/hamburger.js"></script>
+        <script src="/src/pages/checkout.js"></script>
     </body>
 </html>

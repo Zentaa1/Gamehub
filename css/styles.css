@@ -53,8 +53,11 @@ footer h2 {
 }
 
 .header_UL {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
     margin: 7px;
+    padding-right: 2rem;
 }
 
 .header_UL li {
@@ -110,6 +113,8 @@ footer h2 {
 }
 
 .mobile {
+    position: sticky;
+    top: 0;
     max-width: 100%;
     margin: auto;
     background-color: #D9D9D9;
@@ -155,7 +160,7 @@ footer h2 {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-}
+} 
 
 .main-header {
     padding: 10px;
@@ -191,15 +196,18 @@ footer h2 {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
-    padding-top: 2rem;
+    flex-wrap: wrap;
+    padding-top: 5rem;
 }
 
 .main-catchphrase h1 {
     max-width: 200px;
+    text-align: left;
 }
 
 .main-catchphrase h2 {
     max-width: 400px;
+    text-align: left;
 }
 
 .main-paragraph {
@@ -248,7 +256,6 @@ footer h2 {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding-top: 5rem;
     overflow-x: auto;
 }
 
@@ -441,6 +448,7 @@ footer h2 {
     font-family: 'Khand', sans-serif;
     font-size: 20px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .games-about {
@@ -692,6 +700,124 @@ footer h2 {
     margin-top: 2rem;
 }
 
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.search-bar {
+    margin: 5px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.searchButton {
+    width: 100%;
+}
+
+.search-bar input {
+    padding: 5px;
+    background-color: white;
+    color: #1B203D;
+    font-weight: 600;
+    border-radius: 1rem;
+    font-family: 'Khand', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.filters button {
+    width: 75px;
+    padding: 5px;
+    background-color: white;
+    color: #1B203D;
+    font-weight: 600;
+    border-radius: 1rem;
+    font-family: 'Khand', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.filters button:hover {
+    background-color: #1B203D;
+    color: white;
+    transition: all 0.45s ease;
+}
+
+.shoppingCart {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartItems, .checkoutButton, .shoppingCart h2 {
+    text-align: center;
+}
+
+.totalPrice {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem 0rem;
+}
+
+.checkoutButton a {
+    width: 75px;
+    padding: 7px;
+    background-color: #1B203D;
+    color: white;
+    font-weight: 600;
+    border-radius: 1rem;
+    font-family: 'Khand', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.checkoutSide a {
+    width: 75px;
+    padding: 7px;
+    background-color: #1B203D;
+    color: white;
+    font-weight: 600;
+    border-radius: 1rem;
+    font-family: 'Khand', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.expressDiv {
+    display: flex;
+}
+
+.expressDiv p {
+    margin-left: 2px;
+}
+
+.visa{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.visa input:nth-child(2) {
+    width: 40px;
+}
+
+.visa input:nth-child(3) {
+    flex: 1;
+}
+
+.checkoutTop {
+    display: flex;
+    justify-content: center;
+}
+
+.checkoutSide {
+    text-align: center;
+}
+
+
 /* Responsive */
 
 @media screen and (max-width: 768px) {
@@ -774,7 +900,7 @@ footer h2 {
     }
 
     .about p {
-        text-align: center;
+        text-align: left;
 
     }
 }
@@ -799,6 +925,15 @@ footer h2 {
 @media screen and (max-width:1200px){
     .cart-item {
         margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width:616px) {
+    .main-catchphrase h1 {
+        padding: 1rem;
+    }
+    .main-catchphrase h2 {
+        padding: 1rem;
     }
 }
 

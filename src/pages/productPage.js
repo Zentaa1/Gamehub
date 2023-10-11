@@ -36,6 +36,8 @@ async function productPage() {
     gameInfo.appendChild(gameDesc);
 
 
+    
+
     const isOnSale = game.onSale;
 
     const gamePrice = document.createElement('h2');
@@ -54,7 +56,13 @@ async function productPage() {
     const addToCartBtn = document.createElement('a');
     addToCartBtn.classList.add('add-to-cart');
     addToCartBtn.textContent = 'Add to Cart';
-    addToCartBtn.setAttribute('href', 'checkout.html');
+
+    addToCartBtn.addEventListener('click', async (event) => {
+            window.location.href = 'cart.html';
+
+    });
+
+
     gameInfo.appendChild(addToCartBtn);
 
     const stackedReviews = document.createElement('div');
