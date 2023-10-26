@@ -6,24 +6,25 @@ export async function actionGameFilter() {
     showLoading();
 
     try {
-        const url = 'https://api.noroff.dev/api/v1/gamehub';
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         gameSection.innerHTML = "";
 
 
         const game = await fetchApi(url);
 
-        const actionGames = game.filter(game => game.genre === 'Action');
+        const actionGames = game.filter(game => game.categories[0].name === 'Action');
 
         for (let i = 0; i < actionGames.length; i++) {
 
             showLoading();
 
-            const gameTitleData = actionGames[i].title;
-            const gameImgData = actionGames[i].image;
-            const gamePriceData = actionGames[i].price;
-            const gameDiscountData = actionGames[i].discountedPrice;
-            const isOnSale = actionGames[i].onSale;
+
+            const gameTitleData = actionGames[i].name;
+            const gameImgData = actionGames[i].images[0].src;
+            const gamePriceData = actionGames[i].prices.regular_price;
+            const gameDiscountData = actionGames[i].prices.sale_price;
+            const isOnSale = actionGames[i].on_sale;
             const gameId = actionGames[i].id;
 
             const games = document.createElement('div');
@@ -53,11 +54,11 @@ export async function actionGameFilter() {
             if (isOnSale) {
                 const gameOldPrice = document.createElement('li');
                 gameOldPrice.classList.add('gameOldPrice');
-                gameOldPrice.textContent = gamePriceData + ' USD';
+                gameOldPrice.textContent = (gamePriceData / 100) + ' NOK';
                 gameInfo.appendChild(gameOldPrice)
-                gamePrice.textContent = gameDiscountData + ' USD';
+                gamePrice.textContent = (gameDiscountData / 100) + ' NOK';
             } else {
-                gamePrice.textContent = gamePriceData + ' USD';
+                gamePrice.textContent = (gamePriceData / 100) + ' NOK';
             }
         }
         hideLoading();

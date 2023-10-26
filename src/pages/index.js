@@ -5,7 +5,7 @@ import main from "../index/actionGames.js";
 
 
 try {
-    const url = 'https://api.noroff.dev/api/v1/gamehub';
+    const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
     const game = await fetchApi(url);
 } catch (error){
     console.log(error);

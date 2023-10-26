@@ -5,15 +5,15 @@ export default async function main() {
 
         showLoading();
 
-        const url = 'https://api.noroff.dev/api/v1/gamehub';
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gamesData = await fetchApi(url);
 
-        const actionGames = gamesData.filter(game => game.genre === 'Action');
+        const actionGames = gamesData.filter(game => game.categories[0].name === 'Action');
 
         for (let i = 0; i < actionGames.length; i++) {
             const gameShowcase = document.querySelector('.main-actiongames');
             const gameId = actionGames[i].id;
-            const gameImg = actionGames[i].image;
+            const gameImg = actionGames[i].images[0].src;
 
             const gameShowcaseLink = document.createElement('a');
             gameShowcaseLink.setAttribute('href', `gameInformation.html?id=${gameId}`);

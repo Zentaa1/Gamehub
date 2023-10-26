@@ -432,7 +432,17 @@ footer h2 {
 
 .game_desc {
     max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
 }
+
+.games-gamesection div img {
+    display: block;
+    margin: 0 auto;
+}
+
 
 .stock {
     font-size: 12px;
@@ -883,7 +893,7 @@ footer h2 {
     }
 }
 
-@media screen and (max-width:430px){
+@media screen and (max-width:510px){
     .games-gamesection {
         grid-template-columns: 1fr;
     }

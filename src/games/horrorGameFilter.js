@@ -1,4 +1,4 @@
-import fetchApi from "../fetchApi.js";
+import fetchApi from '../fetchApi.js';
 import { showLoading, hideLoading } from "../loading.js";
 
 
@@ -6,24 +6,25 @@ export async function horrorGameFilter() {
     showLoading();
 
     try {
-        const url = 'https://api.noroff.dev/api/v1/gamehub';
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         gameSection.innerHTML = "";
 
 
         const game = await fetchApi(url);
 
-        const horrorGames = game.filter(game => game.genre === 'Horror');
+        const horrorGames = game.filter(game => game.categories[0].name === 'Horror');
 
         for (let i = 0; i < horrorGames.length; i++) {
 
             showLoading();
 
-            const gameTitleData = horrorGames[i].title;
-            const gameImgData = horrorGames[i].image;
-            const gamePriceData = horrorGames[i].price;
-            const gameDiscountData = horrorGames[i].discountedPrice;
-            const isOnSale = horrorGames[i].onSale;
+
+            const gameTitleData = horrorGames[i].name;
+            const gameImgData = horrorGames[i].images[0].src;
+            const gamePriceData = horrorGames[i].prices.regular_price;
+            const gameDiscountData = horrorGames[i].prices.sale_price;
+            const isOnSale = horrorGames[i].on_sale;
             const gameId = horrorGames[i].id;
 
             const games = document.createElement('div');
@@ -53,11 +54,11 @@ export async function horrorGameFilter() {
             if (isOnSale) {
                 const gameOldPrice = document.createElement('li');
                 gameOldPrice.classList.add('gameOldPrice');
-                gameOldPrice.textContent = gamePriceData + ' USD';
+                gameOldPrice.textContent = (gamePriceData / 100) + ' NOK';
                 gameInfo.appendChild(gameOldPrice)
-                gamePrice.textContent = gameDiscountData + ' USD';
+                gamePrice.textContent = (gameDiscountData / 100) + ' NOK';
             } else {
-                gamePrice.textContent = gamePriceData + ' USD';
+                gamePrice.textContent = (gamePriceData / 100) + ' NOK';
             }
         }
         hideLoading();

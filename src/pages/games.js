@@ -13,7 +13,7 @@ async function games() {
     showLoading();
 
     try {
-        const url = 'https://api.noroff.dev/api/v1/gamehub';
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         const searchInput = document.getElementById('searchInput');
         const searchButton = document.getElementById('searchButton');
@@ -26,8 +26,6 @@ async function games() {
             const searchTerm = searchInput.value.trim();
             const filteredGames = searchGames(game, searchTerm);
             displayGames(filteredGames);
-
-            console.log(filteredGames);
         });
         searchInput.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {

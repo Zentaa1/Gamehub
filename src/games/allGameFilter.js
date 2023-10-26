@@ -6,7 +6,7 @@ export async function allGameFilter() {
     showLoading();
 
     try {
-        const url = 'https://api.noroff.dev/api/v1/gamehub';
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         gameSection.innerHTML = "";
 
@@ -17,11 +17,11 @@ export async function allGameFilter() {
 
             showLoading();
 
-            const gameTitleData = game[i].title;
-            const gameImgData = game[i].image;
-            const gamePriceData = game[i].price;
-            const gameDiscountData = game[i].discountedPrice;
-            const isOnSale = game[i].onSale;
+            const gameTitleData = game[i].name;
+            const gameImgData = game[i].images[0].src;
+            const gamePriceData = game[i].prices.regular_price;
+            const gameDiscountData = game[i].prices.sale_price;
+            const isOnSale = game[i].on_sale;
             const gameId = game[i].id;
 
             const games = document.createElement('div');
@@ -51,11 +51,11 @@ export async function allGameFilter() {
             if (isOnSale) {
                 const gameOldPrice = document.createElement('li');
                 gameOldPrice.classList.add('gameOldPrice');
-                gameOldPrice.textContent = gamePriceData + ' USD';
+                gameOldPrice.textContent = (gamePriceData / 100) + ' NOK';
                 gameInfo.appendChild(gameOldPrice)
-                gamePrice.textContent = gameDiscountData + ' USD';
+                gamePrice.textContent = (gameDiscountData / 100) + ' NOK';
             } else {
-                gamePrice.textContent = gamePriceData + ' USD';
+                gamePrice.textContent = (gamePriceData / 100) + ' NOK';
             }
         }
         hideLoading();

@@ -1,6 +1,6 @@
 import fetchApi from "../fetchApi.js";
 
-const url = 'https://api.noroff.dev/api/v1/gamehub';
+const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
 
 fetchApi(url)
     .then(game => {
@@ -32,14 +32,14 @@ export default function thisWeeksDeal(game, index) {
 
 
     const weeksGameImg = document.createElement('img');
-    weeksGameImg.src = game[index].image;
+    weeksGameImg.src = game[index].images[index].src;
     weeksGameLink.appendChild(weeksGameImg);
 
     const weeksGameInfo = document.createElement('ul');
     weeksGame.appendChild(weeksGameInfo);
 
     const weeksGameName = document.createElement('li');
-    weeksGameName.textContent = game[index].title;
+    weeksGameName.textContent = game[index].name;
     weeksGameInfo.appendChild(weeksGameName)
 
     const gamePrice = document.createElement('li');
@@ -49,11 +49,11 @@ export default function thisWeeksDeal(game, index) {
     if (isOnSale) {
         const weeksGameOldPrice = document.createElement('li');
         weeksGameOldPrice.classList.add('gameOldPrice');
-        weeksGameOldPrice.textContent = game[index].price + ' USD';
+        weeksGameOldPrice.textContent = (game[index].prices.price / 100) + ' NOK';
         weeksGameInfo.appendChild(weeksGameOldPrice)
-        gamePrice.textContent = game[index].discountedPrice + ' USD';
+        gamePrice.textContent = (game[index].discountedPrice / 100) + ' NOK';
     } else {
-        gamePrice.textContent = game[index].price + ' USD';
+        gamePrice.textContent = (game[index].prices.price / 100) + ' NOK';
     }
 
 }

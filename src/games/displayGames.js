@@ -11,7 +11,7 @@ export function displayGames(game) {
         gameSection.appendChild(noResultsMessage);
     } else {
         game.forEach(game => {
-            const isOnSale = game.onSale;
+            const isOnSale = game.on_sale;
 
             const games = document.createElement('div');
             games.classList.add('games');
@@ -23,14 +23,14 @@ export function displayGames(game) {
             games.appendChild(gameLink);
 
             const gameImg = document.createElement('img');
-            gameImg.src = game.image;
+            gameImg.src = game.images[0].src;
             gameLink.appendChild(gameImg);
 
             const gameInfo = document.createElement('ul');
             games.appendChild(gameInfo);
 
             const gameTitle = document.createElement('li');
-            gameTitle.textContent = game.title;
+            gameTitle.textContent = game.name;
             gameInfo.appendChild(gameTitle);
 
             const gamePrice = document.createElement('li');
@@ -39,11 +39,11 @@ export function displayGames(game) {
             if (isOnSale) {
                 const gameOldPrice = document.createElement('li');
                 gameOldPrice.classList.add('gameOldPrice');
-                gameOldPrice.textContent = game.price + ' USD';
+                gameOldPrice.textContent = (game.prices.regular_price / 100) + ' NOK';
                 gameInfo.appendChild(gameOldPrice)
-                gamePrice.textContent = game.discountedPrice + ' USD';
+                gamePrice.textContent = (game.prices.sale_price / 100) + ' NOK';
             } else {
-                gamePrice.textContent = game.price + ' USD';
+                gamePrice.textContent = (game.prices.price / 100) + ' NOK';
             }
         });
         gameSection.appendChild(gameList);

@@ -6,24 +6,24 @@ export async function adventureGameFilter() {
     showLoading();
 
     try {
-        const url = 'https://api.noroff.dev/api/v1/gamehub';
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         gameSection.innerHTML = "";
 
 
         const game = await fetchApi(url);
 
-        const adventureGames = game.filter(game => game.genre === 'Adventure');
+        const adventureGames = game.filter(game => game.categories[0].name === 'Adventure');
 
         for (let i = 0; i < adventureGames.length; i++) {
 
             showLoading();
 
-            const gameTitleData = adventureGames[i].title;
-            const gameImgData = adventureGames[i].image;
-            const gamePriceData = adventureGames[i].price;
-            const gameDiscountData = adventureGames[i].discountedPrice;
-            const isOnSale = adventureGames[i].onSale;
+            const gameTitleData = adventureGames[i].name;
+            const gameImgData = adventureGames[i].images[0].src;
+            const gamePriceData = adventureGames[i].prices.regular_price;
+            const gameDiscountData = adventureGames[i].prices.sale_price;
+            const isOnSale = adventureGames[i].on_sale;
             const gameId = adventureGames[i].id;
 
             const games = document.createElement('div');
@@ -53,11 +53,11 @@ export async function adventureGameFilter() {
             if (isOnSale) {
                 const gameOldPrice = document.createElement('li');
                 gameOldPrice.classList.add('gameOldPrice');
-                gameOldPrice.textContent = gamePriceData + ' USD';
+                gameOldPrice.textContent = (gamePriceData / 100) + ' NOK';
                 gameInfo.appendChild(gameOldPrice)
-                gamePrice.textContent = gameDiscountData + ' USD';
+                gamePrice.textContent = (gameDiscountData / 100) + ' NOK';
             } else {
-                gamePrice.textContent = gamePriceData + ' USD';
+                gamePrice.textContent = (gamePriceData / 100) + ' NOK';
             }
         }
         hideLoading();
