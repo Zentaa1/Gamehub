@@ -6,17 +6,15 @@ async function productPage() {
     showLoading();
 
     try {
-        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
-        const data = await fetchApi(url);
-
-        const gameSection = document.querySelector('.games-game');
-        const gameAbout = document.querySelector('.games-about');
-
         const queryString = document.location.search;
         const params = new URLSearchParams(queryString);
         const id = params.get('id');
 
-        const game = data.find((game) => game.id == id);
+        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products/' + id;
+        const game = await fetchApi(url);
+
+        const gameSection = document.querySelector('.games-game');
+        const gameAbout = document.querySelector('.games-about');
 
         if (game) {
             const gameImg = document.createElement('img');

@@ -1,22 +1,21 @@
-import fetchApi from "../fetchApi.js";
+import getDataFromLocalStorage from "../getDataFromLocal.js";
 
-const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
 
-fetchApi(url)
-    .then(game => {
-        const mSecPerWeek = 7 * 24 * 60 * 60 * 1000;
-        let i = 0;
+const game = getDataFromLocalStorage();
 
+if (game) {
+    const mSecPerWeek = 7 * 24 * 60 * 60 * 1000;
+    let i = 0;
+
+    thisWeeksDeal(game, i);
+
+    setInterval(() => {
+        i = (i + 1) % game.length;
         thisWeeksDeal(game, i);
-
-        setInterval(() => {
-            i = (i + 1) % game.length;
-            thisWeeksDeal(game, i);
-        }, mSecPerWeek);
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
+    }, mSecPerWeek);
+} else {
+    console.error('Data not found in localStorage');
+}
 
 export default function thisWeeksDeal(game, index) {
 

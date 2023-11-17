@@ -1,4 +1,4 @@
-import fetchApi from '../fetchApi.js';
+import getDataFromLocalStorage from '../getDataFromLocal.js';
 import { displayGames } from '../games/displayGames.js';
 import { showLoading, hideLoading } from "../loading.js";
 import { allGameFilter } from '../games/allGameFilter.js';
@@ -13,12 +13,11 @@ async function games() {
     showLoading();
 
     try {
-        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         const searchInput = document.getElementById('searchInput');
         const searchButton = document.getElementById('searchButton');
 
-        let game = await fetchApi(url);
+        let game = getDataFromLocalStorage();
 
         displayGames(game);
 
@@ -60,6 +59,7 @@ async function games() {
         horrorGameButton.addEventListener('click', () => {
             horrorGameFilter();
         })
+        hideLoading();
 
 
 

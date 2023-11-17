@@ -1,4 +1,4 @@
-import fetchApi from '../fetchApi.js';
+import getDataFromLocalStorage from "../getDataFromLocal.js";
 import { showLoading, hideLoading } from "../loading.js";
 
 
@@ -6,12 +6,11 @@ export async function allGameFilter() {
     showLoading();
 
     try {
-        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         gameSection.innerHTML = "";
 
 
-        const game = await fetchApi(url);
+        const game = getDataFromLocalStorage();
 
         for (let i = 0; i < game.length; i++) {
 
@@ -59,7 +58,6 @@ export async function allGameFilter() {
             }
         }
         hideLoading();
-
 
 
     } catch (error) {

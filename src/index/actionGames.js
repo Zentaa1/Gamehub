@@ -1,12 +1,11 @@
-import fetchApi from "../fetchApi.js";
+import getDataFromLocalStorage from "../getDataFromLocal.js";
 import { showLoading, hideLoading } from "../loading.js";
 
 export default async function main() {
 
         showLoading();
 
-        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
-        const gamesData = await fetchApi(url);
+        const gamesData = getDataFromLocalStorage();
 
         const actionGames = gamesData.filter(game => game.categories[0].name === 'Action');
 

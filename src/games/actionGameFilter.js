@@ -1,23 +1,20 @@
-import fetchApi from '../fetchApi.js';
+import getDataFromLocalStorage from "../getDataFromLocal.js";
 import { showLoading, hideLoading } from "../loading.js";
 
 
 export async function actionGameFilter() {
-    showLoading();
 
     try {
-        const url = 'https://cms-ca.bjeglerud.com/wp-json/wc/store/products';
         const gameSection = document.querySelector('.games-gamesection');
         gameSection.innerHTML = "";
 
 
-        const game = await fetchApi(url);
+        const game = getDataFromLocalStorage();
 
         const actionGames = game.filter(game => game.categories[0].name === 'Action');
 
         for (let i = 0; i < actionGames.length; i++) {
 
-            showLoading();
 
 
             const gameTitleData = actionGames[i].name;
@@ -61,7 +58,6 @@ export async function actionGameFilter() {
                 gamePrice.textContent = (gamePriceData / 100) + ' NOK';
             }
         }
-        hideLoading();
 
 
 
