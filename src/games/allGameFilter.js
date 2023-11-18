@@ -3,7 +3,6 @@ import { showLoading, hideLoading } from "../loading.js";
 
 
 export async function allGameFilter() {
-    showLoading();
 
     try {
         const gameSection = document.querySelector('.games-gamesection');
@@ -14,7 +13,6 @@ export async function allGameFilter() {
 
         for (let i = 0; i < game.length; i++) {
 
-            showLoading();
 
             const gameTitleData = game[i].name;
             const gameImgData = game[i].images[0].src;
@@ -57,7 +55,6 @@ export async function allGameFilter() {
                 gamePrice.textContent = (gamePriceData / 100) + ' NOK';
             }
         }
-        hideLoading();
 
 
     } catch (error) {
