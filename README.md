@@ -1,70 +1,30 @@
-# Your project title
+# GameHub
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+GameHub is a dynamic webstore designed to cater to gamers' needs, offering an array of products in a user-friendly interface. Initially constructed as a static site, it evolved to incorporate dynamic product integration via a provided API and eventually transitioned to using a custom-built API to fetch products through a CMS.
 
-A simple overview of the use/purpose of the project.
+## Features
 
-## Description
+- **Dynamic Product Integration:** Products are fetched dynamically from an API, ensuring an up-to-date collection.
+- **Filtering and Searching:** Utilize JavaScript-based filtering and search functionalities to navigate through the extensive collection effortlessly.
 
-Add a more detailed description of what your project entails and set out to do.
+## Technologies Used
 
-You can add some bullet points if you'd like to:
+- **Frontend:** HTML, CSS, JavaScript
+- **API Integration:** External API (initially), Custom-built API
 
-- List item 1
-- List item 2
-- List item 3
+## Usage
 
-## Built With
-
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
-
-## Getting Started
-
-### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
-
-```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
+1. **Accessing the Site:** Visit [GameHub]([your_website_url_here](https://amazing-belekoy-eb8422.netlify.app/)) to explore the webstore.
+2. **Navigation:** Use the intuitive interface to browse through products.
+3. **Filtering and Searching:** Take advantage of the filtering and search options provided to narrow down your choices efficiently.
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+We welcome contributions and suggestions. If you'd like to contribute:
+- Fork the repository
+- Make your changes
+- Submit a pull request for review
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+For any inquiries or support, feel free to reach out at [marius@bjeglerud.com](mailto:marius@bjeglerud.com).
