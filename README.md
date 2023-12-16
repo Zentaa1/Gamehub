@@ -14,7 +14,7 @@ GameHub is a dynamic webstore designed to cater to gamers' needs, offering an ar
 
 ## Usage
 
-1. **Accessing the Site:** Visit [GameHub]([https://amazing-belekoy-eb8422.netlify.app/]) to explore the webstore.
+1. **Accessing the Site:** Visit [GameHub](https://amazing-belekoy-eb8422.netlify.app/) to explore the webstore.
 2. **Navigation:** Use the intuitive interface to browse through products.
 3. **Filtering and Searching:** Take advantage of the filtering and search options provided to narrow down your choices efficiently.
 
