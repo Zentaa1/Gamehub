@@ -1,4 +1,6 @@
 # GameHub
+![image](https://github.com/Zentaa1/Gamehub/assets/117643567/4c2bf6f9-8957-444a-8ed0-f09363343d5a)
+
 
 GameHub is a dynamic webstore designed to cater to gamers' needs, offering an array of products in a user-friendly interface. Initially constructed as a static site, it evolved to incorporate dynamic product integration via a provided API and eventually transitioned to using a custom-built API to fetch products through a CMS.
 
